@@ -11,9 +11,81 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&family=Roboto+Mono:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "main-yellow": "hsl(47, 88%, 63%)",
+              "main-gray": "hsl(0, 0%, 50%)",
+              "main-white": "hsl(0, 0%, 100%)",
+              "main-black": "hsl(0, 0%, 7%)",
+            },
+            boxShadow: {
+              "main-boxshadow": "9px 9px 0px 0px hsl(0, 0%, 7%)",
+              "active-main-boxshadow": "14px 14px 0px 0px hsl(0, 0%, 7%)",
+            },
+          },
+        },
+      };
+    </script>
 
     <title>Frontend Mentor | Blog preview card</title>
   </head>
-  <body></body>
+  <body
+    class="bg-main-yellow flex items-center justify-center h-screen text-main-black mx-5 md:mx-0"
+  >
+    <main class="grow">
+      <article
+        class="bg-main-white max-w-sm p-5 rounded-[15px] m-auto border-[1.7px] border-main-black box transition shadow-main-boxshadow hover:shadow-active-main-boxshadow"
+      >
+        <img
+          src="./assets/images/illustration-article.svg"
+          alt="html & css foundation artical banner"
+          class="rounded-[15px] w-full mb-5"
+        />
+
+        <p
+          class="font-bold text-sm bg-main-yellow py-1 px-2 inline-block rounded mb-3"
+        >
+          Learning
+        </p>
+
+        <p class="text-sm font-semibold md:font-bold mb-3">
+          Published <time>21 Dec 2023</time>
+        </p>
+
+        <h3 class="mb-3">
+          <a
+            href="#"
+            class="font-bold text-xl md:text-2xl hover:text-main-yellow"
+            >HTML & Css foundations</a
+          >
+        </h3>
+
+        <p class="mb-6 text-main-gray">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
+
+        <figure class="flex items-center space-x-3">
+          <img
+            src="./assets/images/image-avatar.webp"
+            alt="author avatar image"
+            class="w-8"
+          />
+          <p class="text-sm font-extrabold">Greg Hooper</p>
+        </figure>
+      </article>
+    </main>
+  </body>
 </html>
